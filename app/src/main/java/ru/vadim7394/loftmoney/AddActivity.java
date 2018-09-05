@@ -14,6 +14,23 @@ public class AddActivity extends AppCompatActivity {
     private EditText priceInput;
     private Button addBtn;
 
+    private TextWatcher generalTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            addBtn.setEnabled(!TextUtils.isEmpty(nameInput.getText()) && !TextUtils.isEmpty(priceInput.getText()));
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,38 +40,7 @@ public class AddActivity extends AppCompatActivity {
         priceInput = findViewById(R.id.price);
         addBtn = findViewById(R.id.add_btn);
 
-        nameInput.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                addBtn.setEnabled(!TextUtils.isEmpty(s) && !TextUtils.isEmpty(priceInput.getText()));
-            }
-        });
-
-        priceInput.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                addBtn.setEnabled(!TextUtils.isEmpty(s) && !TextUtils.isEmpty(nameInput.getText()));
-            }
-        });
+        nameInput.addTextChangedListener(generalTextWatcher);
+        priceInput.addTextChangedListener(generalTextWatcher);
     }
 }
