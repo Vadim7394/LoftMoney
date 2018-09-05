@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSizePrimary">20sp</dimen>
+    <dimen name="addInputEditText">24sp</dimen>
+    <dimen name="textMarginHorizontal">32dp</dimen>
+    <dimen name="textMarginTop">16dp</dimen>
+    <dimen name="buttonMarginTop">56dp</dimen>
+    <dimen name="buttonPaddingHorizontal">16dp</dimen>
+    <dimen name="buttonDrawablePadding">6dp</dimen>
+    <dimen name="buttonTextSize">14sp</dimen>
 </resources>

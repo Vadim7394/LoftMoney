@@ -2,6 +2,18 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#3574fa</color>
     <color name="colorRedPrimary">#f4511e</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="lightishBlue">#3574fa</color>
+    <color name="appleGreen">#7ed321</color>
+
+    <color name="colorButtonText">#eaeaea</color>
+    <color name="btnColorEnabled">@color/appleGreen</color>
+    <color name="btnColorDisabled">#eaeaea</color>
+
 </resources>

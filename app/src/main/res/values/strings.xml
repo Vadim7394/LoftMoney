@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">LoftMoney</string>
     <string name="title_app">Привет, как дела?</string>
+    <string name="add_hint_name">Название</string>
+    <string name="add_hint_price">Цена</string>
+    <string name="add_btn">Добавить</string>
 </resources>
