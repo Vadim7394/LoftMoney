@@ -15,5 +15,8 @@
     <color name="colorButtonText">#eaeaea</color>
     <color name="btnColorEnabled">@color/appleGreen</color>
     <color name="btnColorDisabled">#eaeaea</color>
+    <color name="mediumGray">#666664</color>
+    <color name="darkSkyBlue">#4a90e2</color>
+    <color name="listItemDivider">#efefef</color>
 
 </resources>
