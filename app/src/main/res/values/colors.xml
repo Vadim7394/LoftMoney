@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#3574fa</color>
+    <color name="colorPrimary">#3574fa</color>
+    <color name="colorPrimaryDark">#326EEE</color>
+    <color name="colorAccent">#ffc107</color>
     <color name="colorRedPrimary">#f4511e</color>
 
     <color name="white">#ffffff</color>
@@ -18,5 +18,8 @@
     <color name="mediumGray">#666664</color>
     <color name="darkSkyBlue">#4a90e2</color>
     <color name="listItemDivider">#efefef</color>
+
+    <color name="tabTextColor">#8baaef</color>
+    <color name="tabSelectedTextColor">#ffffff</color>
 
 </resources>
