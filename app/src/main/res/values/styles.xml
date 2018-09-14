@@ -38,12 +38,4 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/add_btn</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay">
-
-    </style>
-
-    <style name="AppTheme.PopupOverlay">
-
-    </style>
 </resources>
