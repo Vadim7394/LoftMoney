@@ -18,9 +18,9 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
 
         List<Item> items = new ArrayList<>();
-        items.add(new Item("Молоко", "70р"));
-        items.add(new Item("Зубная щетка", "70р"));
-        items.add(new Item("Сковородка с антипригарным покрытием", "10000р"));
+        items.add(new Item(1, "Молоко", 70));
+        items.add(new Item(2,"Зубная щетка", 70));
+        items.add(new Item(3,"Сковородка с антипригарным покрытием", 1000));
 
         ItemsAdapter adapter = new ItemsAdapter();
         adapter.setItems(items);
