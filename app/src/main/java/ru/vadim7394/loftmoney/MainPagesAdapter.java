@@ -14,8 +14,9 @@ public class MainPagesAdapter extends FragmentPagerAdapter {
 
     private final static int PAGE_EXPENSES = 0;
     private final static int PAGE_INCOMES = 1;
+    private final static int PAGE_BALANCE = 2;
 
-    private final static int PAGES_COUNT = 2;
+    private final static int PAGES_COUNT = 3;
 
     private String[] pagesTitles;
 
@@ -34,6 +35,9 @@ public class MainPagesAdapter extends FragmentPagerAdapter {
 
             case PAGE_INCOMES:
                 return ItemsFragment.newInstance(ItemsFragment.TYPE_INCOMES);
+
+            case PAGE_BALANCE:
+                return BalanceFragment.newInstance();
 
             default:
                 return null;

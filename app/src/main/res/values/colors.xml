@@ -18,6 +18,7 @@
     <color name="mediumGray">#666664</color>
     <color name="darkSkyBlue">#4a90e2</color>
     <color name="listItemDivider">#efefef</color>
+    <color name="fab_add">#ff9e57</color>
 
     <color name="tabTextColor">#8baaef</color>
     <color name="tabSelectedTextColor">#ffffff</color>
