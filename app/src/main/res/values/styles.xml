@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/actionModeColor</item>
+        <item name="actionModeSplitBackground">@color/actionModeColor</item>
     </style>
     <style name="RedText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/colorRedPrimary</item>
@@ -37,5 +40,10 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/add_btn</item>
+    </style>
+    <style name="AddItemTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/darkSkyBlue</item>
     </style>
 </resources>
