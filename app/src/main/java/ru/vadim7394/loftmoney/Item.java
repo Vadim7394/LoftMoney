@@ -8,6 +8,10 @@ import android.os.Parcelable;
  */
 
 public class Item implements Parcelable {
+
+    public static final String TYPE_INCOME = "income";
+    public static final String TYPE_EXPENSE = "expense";
+
     private int id;
     private String name;
     private int price;

@@ -23,4 +23,9 @@
     <color name="tabTextColor">#8baaef</color>
     <color name="tabSelectedTextColor">#ffffff</color>
 
+    <color name="actionModeColor">#333f59</color>
+
+    <color name="itemBackgroundSelected">#f2f2f2</color>
+    <color name="itemBackgroundDefault">#ffffff</color>
+
 </resources>

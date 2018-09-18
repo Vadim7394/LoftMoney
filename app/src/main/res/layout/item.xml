@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="@dimen/listItemPaddingVertical"
-        android:paddingEnd="@dimen/listItemPaddingHorizontal"
-        android:paddingStart="@dimen/listItemPaddingHorizontal"
-        android:paddingTop="@dimen/listItemPaddingVertical">
+        android:paddingBottom="28dp"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        android:paddingTop="28dp">
 
         <TextView
             android:id="@+id/name"
@@ -36,3 +39,4 @@
 
     </LinearLayout>
 
+</FrameLayout>
