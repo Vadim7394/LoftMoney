@@ -38,4 +38,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/add_btn</item>
     </style>
+    <style name="AddItemTheme"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/darkSkyBlue</item>
+    </style>
 </resources>

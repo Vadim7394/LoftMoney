@@ -24,6 +24,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
         notifyDataSetChanged();
     }
 
+    public void addItem(Item item) {
+        this.items.add(item);
+        notifyItemInserted(items.size() - 1);
+    }
+
     @Override
     public int getItemCount() {
         return items.size();
