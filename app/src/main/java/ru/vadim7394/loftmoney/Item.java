@@ -5,27 +5,25 @@ package ru.vadim7394.loftmoney;
  */
 
 public class Item {
+    private int id;
     private String name;
-    private String price;
+    private int price;
 
-    Item(String name, String price) {
+    public Item(int id, String name, int price) {
+        this.id = id;
         this.name = name;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPrice() {
+    public int getPrice() {
         return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
     }
 }

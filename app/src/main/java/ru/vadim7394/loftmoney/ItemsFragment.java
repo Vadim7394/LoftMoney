@@ -11,8 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -22,15 +25,14 @@ public class ItemsFragment extends Fragment {
 
     private static final String KEY_TYPE = "type";
 
-    private static final int TYPE_UNKNOWN = -1;
-
     public static final int TYPE_EXPENSES = 1;
     public static final int TYPE_INCOMES = 2;
 
     private RecyclerView recycler;
     private ItemsAdapter adapter;
+    private Api api;
 
-    private int type;
+    private String type;
 
     public ItemsFragment() {}
 
@@ -50,19 +52,13 @@ public class ItemsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         Bundle args = getArguments();
+        type = args.getString(KEY_TYPE);
 
-        if(args != null) {
-            type = args.getInt(KEY_TYPE, TYPE_UNKNOWN);
+        api = ((App) getActivity().getApplication()).getApi();
 
-            if(type == TYPE_UNKNOWN) {
-                throw new IllegalStateException("UNKNOWN TYPE");
-            }
-        } else {
-            throw new IllegalStateException("YOU MAST PASS VALID FRAGMENT TYPE");
-        }
 
         adapter  = new ItemsAdapter();
-        adapter.setItems(createListItems());
+        loadItems();
     }
 
     @Override
@@ -79,15 +75,24 @@ public class ItemsFragment extends Fragment {
         recycler.setLayoutManager(new LinearLayoutManager(requireContext()));
     }
 
-    private List<Item> createListItems() {
-        List<Item> items = new ArrayList<>();
-        items.add(new Item("Молоко", "70р"));
-        items.add(new Item("Зубная щетка", "70р"));
-        items.add(new Item("Сковородка с антипригарным покрытием", "10000р"));
-        items.add(new Item("Молоко", "70р"));
-        items.add(new Item("Зубная щетка", "70р"));
-        items.add(new Item("Сковородка с антипригарным покрытием", "10000р"));
-        return items;
+    private void loadItems() {
+
+        Call call = api.getItems(type);
+
+        call.enqueue(new Callback<List<Item>>() {
+
+            @Override
+            public void onResponse(Call<List<Item>> call, Response<List<Item>> response) {
+                List<Item> items = response.body();
+                adapter.setItems(items);
+            }
+
+            @Override
+            public void onFailure(Call<List<Item>> call, Throwable t) {
+
+            }
+        });
+
     }
 
 }
